@@ -1,3 +1,37 @@
 # Claude Agent Progress Log
 # Project: [PROJECT_NAME]
-# Format: SESSION | DATE | AGENT | COMPLETED | NEXT | BLOCKERS
+#
+# Each agent appends an entry after every session. Format varies by agent role.
+# Examples below show what each agent type writes.
+#
+# --- Example: backend-dev ---
+# SESSION   | 2026-03-27 | backend-dev
+# COMPLETED | User registration endpoint with email/password
+# TESTS     | 8 passed, 0 failed
+# COMMITTED | feat(auth): add user registration endpoint
+# NEXT      | Login endpoint, or none — awaiting qa-agent
+# BLOCKERS  | None
+#
+# --- Example: qa-agent ---
+# SESSION   | 2026-03-27 | qa-agent
+# VERIFIED  | User registration (feature 001)
+# RESULT    | PASS
+# NOTES     | Tested happy path, duplicate email, missing fields, weak password
+# NEXT      | Awaiting backend-dev for login endpoint
+# BLOCKERS  | None
+#
+# --- Example: code-reviewer ---
+# SESSION   | 2026-03-27 | code-reviewer
+# REVIEWED  | feat(auth): user registration (commits abc123..def456)
+# RESULT    | HAS_FIXES
+# FINDINGS  | 1 must-fix / 2 should-fix / 1 suggestion
+# NEXT      | Back to backend-dev to resolve must-fix items
+# BLOCKERS  | None
+#
+# --- Example: security-reviewer ---
+# SESSION   | 2026-03-27 | security-reviewer
+# AUDITED   | feat(auth): user registration and login
+# RESULT    | CLEAR
+# FINDINGS  | 0 critical / 1 warning / 0 info
+# NEXT      | Proceed to PR
+# BLOCKERS  | None

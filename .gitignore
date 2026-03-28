@@ -27,3 +27,8 @@ Thumbs.db
 .vscode/settings.json
 .idea/
 *.swp
+*.pem
+*.key
+*.pfx
+*.p12
+*.p8

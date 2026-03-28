@@ -8,6 +8,7 @@ jobs:
   quality-gates:
     name: Quality Gates
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -26,7 +27,7 @@ jobs:
           uv pip install --system -e ".[dev]"
 
       - name: Lint
-        run: ruff check . && ruff format --check .
+        run: ruff check . --statistics && ruff format --check .
 
       - name: Secret scan
         uses: trufflesecurity/trufflehog@main

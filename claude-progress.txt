@@ -1,0 +1,3 @@
+# Claude Agent Progress Log
+# Project: [PROJECT_NAME]
+# Format: SESSION | DATE | AGENT | COMPLETED | NEXT | BLOCKERS

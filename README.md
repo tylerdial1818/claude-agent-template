@@ -32,10 +32,7 @@ agents starts building your project from a structured spec.
 ### 1. Create your project from this template
 
 ```bash
-gh repo create my-app-name \
-  --template OWNER/claude-agent-template \
-  --private \
-  --clone
+gh repo create APP-NAME --template tylerdial1818/claude-agent-template --private --clone
 
 cd my-app-name
 ```
